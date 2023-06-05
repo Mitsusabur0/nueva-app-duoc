@@ -1,13 +1,49 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>agregar-cliente</ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Agregar cliente</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">agregar-cliente</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card class="container">
+    <form #form="ngForm">
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          Nombre
+        </ion-label>
+        <ion-input type="text" ngModel name="nombreCliente" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="call-outline"></ion-icon>
+          Teléfono
+        </ion-label>
+        <ion-input type="text" ngModel name="telefono" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="id-card-outline"></ion-icon>
+          Rut
+        </ion-label>
+        <ion-input type="text" ngModel name="rut" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="mail-outline"></ion-icon>
+          Email
+        </ion-label>
+        <ion-input type="text" ngModel name="email" required></ion-input>
+      </ion-item>
+
+
+  
+      <ion-button expand="full" type="submit" [disabled]="!form.valid">Agregar cliente</ion-button>
+      <ion-button expand="full" fill="outline" routerLink="/home">Volver al inicio</ion-button>
+    </form>
+  </ion-card>
+  
 </ion-content>

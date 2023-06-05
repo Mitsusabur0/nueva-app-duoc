@@ -1,20 +1,20 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Registrar</ion-title>
+    <ion-title>Crear cuenta</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  <ion-card class="container">
     <ion-card-header>
-      <ion-card-title>Register</ion-card-title>
+      <ion-card-title>Ingresa tus datos:</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      <form #form="ngForm" (ngSubmit)="onSignup(form)">
+      <form #form="ngForm">
 
         <ion-item>
-          <ion-label position="floating">Username</ion-label>
+          <ion-label position="floating">Nombre de usuario</ion-label>
           <ion-input type="text" ngModel name="username" required></ion-input>
         </ion-item>
 
@@ -24,12 +24,17 @@
         </ion-item>
 
         <ion-item>
-          <ion-label position="floating">Password</ion-label>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" ngModel name="password" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirmar contraseña</ion-label>
           <ion-input type="password" ngModel name="password" required></ion-input>
         </ion-item>
 
-        <ion-button expand="full" type="submit" [disabled]="!form.valid">Sign up</ion-button>
-        <ion-button expand="full" fill="outline" routerLink="/login">Back to Login</ion-button>
+        <!-- <ion-button expand="full" type="submit" [disabled]="!form.valid">Registrar</ion-button> -->
+        <ion-button expand="full" routerLink="/login" [disabled]="!form.valid">Registrar</ion-button>
+        <ion-button expand="full" fill="outline" routerLink="/login">Volver a iniciar sesión</ion-button>
 
       </form>
     </ion-card-content>

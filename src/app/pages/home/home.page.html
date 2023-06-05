@@ -1,13 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>home</ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+
+  <ion-card class="container">
+    <ion-button expand="full" routerLink="/agregar-propiedad">Agregar propiedad</ion-button>
+    <ion-button expand="full" routerLink="/agregar-cliente">Agregar cliente</ion-button>
+    <ion-button expand="full" color="danger" routerLink="/login">Cerrar sesión</ion-button>  
+  </ion-card>
+  
 </ion-content>

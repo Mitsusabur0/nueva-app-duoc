@@ -1,13 +1,128 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>agregar-propiedad</ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Agregar propiedad</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">agregar-propiedad</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card class="container">
+    <form #form="ngForm">
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+          Tipo de propiedad
+        </ion-label>
+        <ion-input type="text" ngModel name="tipoPropiedad" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="navigate-circle-outline"></ion-icon>
+          Dirección
+        </ion-label>
+        <ion-input type="text" ngModel name="direccion" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          Dueño/a
+        </ion-label>
+        <ion-input type="text" ngModel name="duenio" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="pricetag-outline"></ion-icon>
+          Precio</ion-label>
+        <ion-input type="number" ngModel name="precio" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="pricetags-outline"></ion-icon>
+          Gastos comunes</ion-label>
+        <ion-input type="number" ngModel name="ggcc" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="people-outline"></ion-icon>
+          Número de habitaciones</ion-label>
+        <ion-input type="number" ngModel name="habitaciones" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="woman-outline"></ion-icon>
+          <ion-icon slot="start" name="man-outline"></ion-icon>
+          Número de baños</ion-label>
+        <ion-input type="number" ngModel name="banios" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+          Bodega</ion-label>
+        <ion-input type="text" ngModel name="bodega" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="car-outline"></ion-icon>
+          Estacionamiento</ion-label>
+        <ion-input type="text" ngModel name="estacionamiento" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="map-outline"></ion-icon>
+          Metros cuadrados</ion-label>
+        <ion-input type="text" ngModel name="m2" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="flame-outline"></ion-icon>
+          Tipo agua caliente</ion-label>
+        <ion-input type="text" ngModel name="aguaCaliente" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="flame-outline"></ion-icon>
+          Calefacción</ion-label>
+        <ion-input type="text" ngModel name="calefaccion" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="paw-outline"></ion-icon>
+          Mascotas</ion-label>
+        <ion-input type="text" ngModel name="mascotas" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon slot="start" name="images-outline"></ion-icon>
+          Fotos</ion-label>
+          <br><br>
+        <input type="file">
+        <br>
+      </ion-item>
+      
+
+
+
+
+      
+
+
+
+  
+      <ion-button expand="full" type="submit" [disabled]="!form.valid">Agregar propiedad</ion-button>
+      <ion-button expand="full" fill="outline" routerLink="/home">Volver al inicio</ion-button>
+    </form>
+  </ion-card>
+  
 </ion-content>
