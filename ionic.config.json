@@ -1,0 +1,7 @@
+{
+  "name": "propiedadesApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
