@@ -41,7 +41,8 @@
 
 
   
-      <ion-button expand="full" type="submit" [disabled]="!form.valid">Agregar cliente</ion-button>
+      <!-- <ion-button expand="full" type="submit" [disabled]="!form.valid">Agregar cliente</ion-button> -->
+      <ion-button expand="full" routerLink="/home" [disabled]="!form.valid">Agregar cliente</ion-button>
       <ion-button expand="full" fill="outline" routerLink="/home">Volver al inicio</ion-button>
     </form>
   </ion-card>
