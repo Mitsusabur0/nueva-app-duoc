@@ -1,8 +1,12 @@
+import { Client } from './client.model';
+
 export interface Property {
-    id: number;
-    name: string;
-    location: string;
-    price: number;
-    // Add more fields as necessary
-  }
-  
+  id: number;
+  type: string;
+  address: string;
+  owner: Client; // This creates a link to the Client model
+  price: number;
+  ggcc: number;
+  rooms: number;
+  bathrooms: number;
+}

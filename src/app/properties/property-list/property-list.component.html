@@ -1,0 +1,8 @@
+<div *ngIf="properties">
+  <div *ngFor="let property of properties">
+    <h2>{{ property.name }}</h2>
+    <p>{{ property.location }}</p>
+    <p>{{ property.price }}</p>
+    <!-- Add more fields as necessary -->
+  </div>
+</div>
