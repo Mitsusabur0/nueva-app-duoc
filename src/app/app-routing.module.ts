@@ -28,6 +28,10 @@ const routes: Routes = [
     path: 'agregar-cliente',
     loadChildren: () => import('./pages/agregar-cliente/agregar-cliente.module').then( m => m.AgregarClientePageModule)
   },
+  {
+    path: 'details',
+    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
+  },
 ];
 
 @NgModule({
