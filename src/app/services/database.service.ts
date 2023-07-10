@@ -1,11 +1,21 @@
 import { Injectable } from '@angular/core';
-import { CapacitorSQLite, Database } from '@capacitor-community/sqlite';
-
+import { Storage } from '@ionic/storage-angular';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DatabaseService {
+  constructor(private storage: Storage) { 
+    // If using, define drivers here: await this.storage.defineDriver(/*...*/);
+    this.init();
+  }
 
-  constructor() { }
+  async init() {
+    // If not yet done, create the storage
+    if (!this.storage.get('_storage')) {
+      await this.storage.create();
+    }
+  }
+  
+  // Implement your methods to interact with Storage here
 }
